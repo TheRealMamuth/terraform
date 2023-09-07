@@ -6,5 +6,5 @@ resource "digitalocean_project" "project" {
 }
 
 data "digitalocean_project" "project" {
-  name = var.my_digitalocean_project_name
+  name = var.project_name
 }
