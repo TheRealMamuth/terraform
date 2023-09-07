@@ -1,10 +1,10 @@
-resource "digitalocean_project" "my_digitalocean_project" {
-  name        = var.my_digitalocean_project_name
-  description = var.my_digitalocean_project_description
-  purpose     = var.my_digitalocean_project_purpose
-  environment = var.my_digitalocean_project_environment
+resource "digitalocean_project" "project" {
+  name        = var.project_name
+  description = var.project_description
+  purpose     = var.project_purpose
+  environment = var.project_environment
 }
 
-data "digitalocean_project" "playground" {
+data "digitalocean_project" "project" {
   name = var.my_digitalocean_project_name
 }

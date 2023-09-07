@@ -1,19 +1,19 @@
-variable "my_digitalocean_project_name" {
+variable "project_name" {
   description = "value"
   default     = "DefaultProject"
 }
 
-variable "my_digitalocean_project_description" {
+variable "project_description" {
   description = "value"
   default     = "This is default description please change it"
 }
 
-variable "my_digitalocean_project_purpose" {
+variable "project_purpose" {
   description = "value"
   default     = "This is default purpose please chcnge it"
 }
 
-variable "my_digitalocean_project_environment" {
+variable "project_environment" {
   description = "value"
   default     = "Development"
 }
