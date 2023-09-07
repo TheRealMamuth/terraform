@@ -3,5 +3,5 @@ output "project_id" {
 }
 
 output "project_name" {
-  vaule = data.digitalocean_project.project.name
+  value = data.digitalocean_project.project.name
 }
