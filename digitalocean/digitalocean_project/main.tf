@@ -7,4 +7,5 @@ resource "digitalocean_project" "project" {
 
 data "digitalocean_project" "project" {
   name = var.project_name
+  depends_on = [ digitalocean_project.project ]
 }
