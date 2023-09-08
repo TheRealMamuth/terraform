@@ -14,6 +14,6 @@ resource "digitalocean_project_resources" "project_resources" {
   project = data.digitalocean_project.project.id
   depends_on = [ digitalocean_project.project ]
   resources = [
-    var.urns
+    var.resources_urns
   ]
 }
