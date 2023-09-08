@@ -14,6 +14,11 @@ variable "project_purpose" {
 }
 
 variable "project_environment" {
-  description = "value"
+  description = "Only accept Development, Staging, Production"
   default     = "Development"
+}
+
+variable "urns" {
+  description = "List of urns"
+  default     = []
 }
