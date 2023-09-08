@@ -17,9 +17,3 @@ variable "project_environment" {
   description = "Only accept Development, Staging, Production"
   default     = "Development"
 }
-
-variable "resources_urns" {
-  description = "string of urns"
-  default     = ""
-  type = string
-}
