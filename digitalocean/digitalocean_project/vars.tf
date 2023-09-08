@@ -19,6 +19,6 @@ variable "project_environment" {
 }
 
 variable "resources_urns" {
-  description = "List of urns"
-  default     = []
+  description = "string of urns"
+  default     = string
 }
