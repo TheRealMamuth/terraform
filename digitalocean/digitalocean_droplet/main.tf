@@ -14,6 +14,6 @@ data "digitalocean_project" "playground" {
 resource "digitalocean_project_resources" "barfoo" {
   project = data.digitalocean_project.playground.id
   resources = [
-    digitalocean_droplet.student_hosts[*].id,
+    flatten(digitalocean_droplet.student_hosts[*].id)
   ]
 }
