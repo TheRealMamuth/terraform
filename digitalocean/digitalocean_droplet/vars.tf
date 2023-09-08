@@ -10,7 +10,7 @@ variable "droplet_image" {
     type        = string
 }
 
-varable "droplet_region" {
+variable "droplet_region" {
     description = "This is region for your droplet"
     default     = "fra1"
     type        = string
