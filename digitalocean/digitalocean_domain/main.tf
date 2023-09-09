@@ -23,5 +23,5 @@ resource "digitalocean_record" "dns_entry" {
   type   = each.value["type"]
   name   = each.value["name"]
   value  = each.value["value"]
-  ttl    = each.value["ttl"]
+  ttl    = each.value[ttl]
 }
