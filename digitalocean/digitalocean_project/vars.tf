@@ -1,19 +1,10 @@
-variable "project_name" {
-  description = "value"
-  default     = "DefaultProject"
-}
-
-variable "project_description" {
-  description = "value"
-  default     = "This is default description please change it"
-}
-
-variable "project_purpose" {
-  description = "value"
-  default     = "This is default purpose please chcnge it"
-}
-
-variable "project_environment" {
-  description = "Only accept Development, Staging, Production"
-  default     = "Development"
+variable "project_config" {
+  type = map(any)
+  default = {
+    name        = "DefaultProject",
+    description = "This is default description please change it",
+    purpose     = "This is default purpose please chcnge it",
+    environment = "Development"
+  }
+  
 }

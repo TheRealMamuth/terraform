@@ -11,13 +11,13 @@ variable "droplet_config" {
 }
 
 variable "student_count" {
-    description = "This is count for your droplet"
-    default     = 1
-    type        = number
+  description = "This is count for your droplet"
+  default     = 1
+  type        = number
 }
 
 variable "project_name" {
-    description = "Name of the project"
-    type = string
-    default = "default"
+  description = "Name of the project"
+  type        = string
+  default     = "default"
 }
