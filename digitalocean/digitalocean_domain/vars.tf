@@ -15,13 +15,13 @@ variable "dns_entries" {
   default = [ {
     type  = ""
     name  = ""
-    value = ""
+    target = ""
     ttl   = 0
   } ]
   type = list(object({
     type  = string
     name  = string
-    value = string
+    target = string
     ttl   = number
   }))
 }
