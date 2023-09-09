@@ -4,3 +4,8 @@ variable "domain_config" {
     name = "example.com"
   }
 }
+
+variable "project_name" {
+  type = string
+  default = "default"
+}
