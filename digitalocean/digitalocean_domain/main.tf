@@ -13,5 +13,5 @@ data "digitalocean_project" "playground" {
 
 resource "digitalocean_project_resources" "barfoo" {
   project   = data.digitalocean_project.playground.id
-  resources = flatten(digitalocean_domain.domain.urn)
+  resources = [ digitalocean_domain.domain.urn ]
 }
