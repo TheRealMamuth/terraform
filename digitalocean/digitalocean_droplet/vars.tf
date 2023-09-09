@@ -10,7 +10,7 @@ variable "droplet_config" {
   }
 }
 
-variable "student_count" {
+variable "droplet_count" {
   description = "This is count for your droplet"
   default     = 1
   type        = number

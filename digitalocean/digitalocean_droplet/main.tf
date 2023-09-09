@@ -1,5 +1,5 @@
-resource "digitalocean_droplet" "student_hosts" {
-  count    = var.student_count
+resource "digitalocean_droplet" "droplet_hosts" {
+  count    = var.droplet_count
   image    = var.droplet_config["image"]
   name     = "${var.droplet_config["name"]}-${count.index}"
   region   = var.droplet_config["region"]
@@ -13,5 +13,5 @@ data "digitalocean_project" "playground" {
 
 resource "digitalocean_project_resources" "barfoo" {
   project   = data.digitalocean_project.playground.id
-  resources = flatten(digitalocean_droplet.student_hosts.*.urn)
+  resources = flatten(digitalocean_droplet.droplet_hosts.*.urn)
 }
