@@ -20,5 +20,4 @@ output "droplet_map" {
       ip_priv = droplet.ipv4_address_private
     }
   ]
-  
 }
