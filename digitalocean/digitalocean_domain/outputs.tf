@@ -10,6 +10,6 @@ output "domain_id" {
   value = digitalocean_domain.domain.id
 }
 
-output "domin_name" {
+output "domain_name" {
   value = digitalocean_domain.domain.name
 }
