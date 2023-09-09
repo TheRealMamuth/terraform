@@ -13,7 +13,7 @@ output "droplet_urns" {
 
 output "droplet_map" {
   value = [
-    for droplet in digital_droplet.student_hosts : {
+    for droplet in digitalocean_droplet.student_hosts : {
       name = droplet.name
       id = droplet.id
       ip = droplet.ipv4_address
