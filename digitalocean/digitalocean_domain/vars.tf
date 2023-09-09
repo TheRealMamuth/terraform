@@ -16,12 +16,12 @@ variable "dns_entries" {
     type  = ""
     name  = ""
     value = ""
-    ttl   = ""
+    ttl   = 0
   } ]
   type = list(object({
     type  = string
     name  = string
     value = string
-    ttl   = string
+    ttl   = number
   }))
 }
