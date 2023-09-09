@@ -9,3 +9,7 @@ output "domain_zone" {
 output "domain_id" {
   value = digitalocean_domain.domain.id
 }
+
+output "domin_name" {
+  value = digitalocean_domain.domain.name
+}
