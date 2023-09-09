@@ -3,5 +3,5 @@ output "domain_urn" {
 }
 
 output "domain_zone" {
-  value = data.digitalocean_domain.domain.zone
+  value = data.digitalocean_domain.domain.zone_file
 }
