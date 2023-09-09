@@ -9,3 +9,13 @@ variable "project_name" {
   type = string
   default = "default"
 }
+
+variable "dns_entries" {
+  description = "Lista rekordów DNS do dodania."
+  type = list(object({
+    type  = string
+    name  = string
+    value = string
+    ttl   = number
+  }))
+}
