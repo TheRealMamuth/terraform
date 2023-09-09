@@ -6,5 +6,5 @@ variable "project_config" {
     purpose     = "This is default purpose please chcnge it",
     environment = "Development"
   }
-  
+
 }
