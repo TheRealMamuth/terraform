@@ -5,6 +5,7 @@ resource "digitalocean_droplet" "droplet_hosts" {
   region   = var.droplet_config["region"]
   size     = var.droplet_config["size"]
   vpc_uuid = var.droplet_config["vpc_uuid"]
+  user_data = file("${path.module}/user_data.sh")
 }
 
 data "digitalocean_project" "playground" {
