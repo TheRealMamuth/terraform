@@ -21,3 +21,9 @@ variable "project_name" {
   type        = string
   default     = "default"
 }
+
+variable "user_data_path" {
+  description = "User data for droplet - path"
+  type        = string
+  default     = "./_files/init-script.yaml"
+}
