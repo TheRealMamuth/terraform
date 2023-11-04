@@ -6,7 +6,8 @@ variable "droplet_config" {
     region   = "fra1",
     size     = "s-1vcpu-1gb",
     agent    = "true",
-    vpc_uuid = ""
+    vpc_uuid = "",
+    user_data = "./_files/init-script.yaml"
   }
 }
 
@@ -20,10 +21,4 @@ variable "project_name" {
   description = "Name of the project"
   type        = string
   default     = "default"
-}
-
-variable "user_data_path" {
-  description = "User data for droplet - path"
-  type        = string
-  default     = "./_files/init-script.yaml"
 }
