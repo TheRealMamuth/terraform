@@ -32,3 +32,8 @@ resource "digitalocean_project_resources" "barfoo" {
   project   = data.digitalocean_project.playground.id
   resources = flatten(digitalocean_droplet.droplet_hosts.*.urn)
 }
+
+resource "digitalocean_project_resources" "barfoo" {
+  project   = data.digitalocean_project.playground.id
+  resources = flatten(digitalocean_droplet.droplet_hosts_by_users.*.urn)
+}
