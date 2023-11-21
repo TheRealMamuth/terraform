@@ -1,3 +1,8 @@
+variable "users_file" {
+  type = string
+  default = "empty-users.json"
+}
+
 variable "droplet_config" {
   type = map(any)
   default = {
