@@ -35,5 +35,5 @@ resource "digitalocean_project_resources" "barfoo" {
 
 resource "digitalocean_project_resources" "add_user_droplet_to_project" {
   project   = data.digitalocean_project.playground.id
-  resources = flatten(digitalocean_droplet.droplet_hosts_by_users.*.urn)
+  resources = [for d in values(digitalocean_droplet.droplet_hosts_by_users) : d.urn]
 }
