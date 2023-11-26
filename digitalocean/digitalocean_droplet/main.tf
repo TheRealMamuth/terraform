@@ -21,6 +21,7 @@ resource "digitalocean_droplet" "droplet_hosts_by_users" {
   size     = var.droplet_config["size"]
   vpc_uuid = var.droplet_config["vpc_uuid"]
   user_data = file(var.droplet_config["user_data"])
+  ssh_keys = [digitalocean_ssh_key.student_ssh_key.id]
 
   provisioner "file" {
     source = "${path.cwd}/_files/ro-bb-student"
@@ -37,6 +38,11 @@ resource "digitalocean_droplet" "droplet_hosts_by_users" {
 
 resource "tls_private_key" "ssh_key" {
     algorithm = "ED25519"
+}
+
+resource "digitalocean_ssh_key" "student_ssh_key" {
+  name = "ro-bb-student"
+  public_key = tls_private_key.ssh_key.public_key_openssh
 }
 
 
