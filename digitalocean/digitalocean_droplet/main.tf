@@ -21,6 +21,22 @@ resource "digitalocean_droplet" "droplet_hosts_by_users" {
   size     = var.droplet_config["size"]
   vpc_uuid = var.droplet_config["vpc_uuid"]
   user_data = file(var.droplet_config["user_data"])
+
+  provisioner "file" {
+    source = "${path.cwd}/_files/ro-bb-student"
+    destination = "/tmp/ro-bb-student"
+
+    connection {
+      type = "ssh"
+      user = "root"
+      private_key = tls_private_key.ssh_key.private_key_pem
+      host = self.ipv4_address
+    }
+  }
+}
+
+resource "tls_private_key" "ssh_key" {
+    algorithm = "ED25519"
 }
 
 
