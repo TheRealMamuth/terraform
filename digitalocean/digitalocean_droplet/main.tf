@@ -22,6 +22,7 @@ resource "digitalocean_droplet" "droplet_hosts_by_users" {
   vpc_uuid = var.droplet_config["vpc_uuid"]
   user_data = file(var.droplet_config["user_data"])
   ssh_keys = [digitalocean_ssh_key.student_ssh_key.id]
+  tags = "szkolenie"
 
   provisioner "file" {
     source = "${path.cwd}/_files/ro-bb-student"
