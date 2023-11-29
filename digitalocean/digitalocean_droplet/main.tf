@@ -10,6 +10,7 @@ resource "digitalocean_droplet" "droplet_hosts" {
   size     = var.droplet_config["size"]
   vpc_uuid = var.droplet_config["vpc_uuid"]
   user_data = file(var.droplet_config["user_data"])
+  tags = ["szkolenie"]
 }
 
 resource "digitalocean_droplet" "droplet_hosts_by_users" {
